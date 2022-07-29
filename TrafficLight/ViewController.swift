@@ -24,12 +24,14 @@ class ViewController: UIViewController {
         
         redLightView.alpha = 0.5
         yellowLightView.alpha = 0.5
-        greenLightView.alpha = 0.5 
+        greenLightView.alpha = 0.5
         
         startButton.layer.cornerRadius = 10
     }
 
     @IBAction func startButtonPressed() {
+        startButton.setTitle(redLightView.alpha != 1 && yellowLightView.alpha != 1 && greenLightView.alpha != 1 ?
+                             "START" : "NEXT", for: .normal)
     }
     
 }
