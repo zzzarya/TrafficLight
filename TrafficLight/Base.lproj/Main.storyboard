@@ -16,14 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuQ-nk-0vA">
+                                <rect key="frame" x="125.5" y="812" width="163" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="SsW-Mg-IJ8"/>
+                                    <constraint firstAttribute="height" constant="50" id="bH3-T4-bCn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRF-Zc-Mho"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-q4-99U">
-                                <rect key="frame" x="132" y="82" width="150" height="480"/>
+                                <rect key="frame" x="132" y="44" width="150" height="480"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwQ-re-qOT">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="JHM-fH-29i"/>
                                             <constraint firstAttribute="width" secondItem="ZwQ-re-qOT" secondAttribute="height" id="MCl-6X-iNt"/>
+                                            <constraint firstAttribute="height" constant="150" id="Zzi-nB-WNd"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBw-xI-bhp">
@@ -42,30 +59,13 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuQ-nk-0vA">
-                                <rect key="frame" x="125.5" y="812" width="163" height="50"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="SsW-Mg-IJ8"/>
-                                    <constraint firstAttribute="height" constant="50" id="bH3-T4-bCn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="START"/>
-                                <connections>
-                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRF-Zc-Mho"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vcx-q4-99U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="7yt-iQ-Ylx"/>
-                            <constraint firstItem="Vcx-q4-99U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="Agl-Bl-05l"/>
+                            <constraint firstItem="Vcx-q4-99U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7JN-ER-MRz"/>
                             <constraint firstItem="FuQ-nk-0vA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNn-fg-AsN"/>
                             <constraint firstItem="Vcx-q4-99U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mwg-vA-pqH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vcx-q4-99U" secondAttribute="trailing" constant="132" id="qRt-Ge-IzP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FuQ-nk-0vA" secondAttribute="bottom" id="u0F-sI-qYW"/>
                         </constraints>
                     </view>
