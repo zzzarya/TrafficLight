@@ -30,6 +30,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButtonPressed() {
+        if redLightView.alpha != 1 && yellowLightView.alpha != 1 && (greenLightView.alpha != 1 || greenLightView.alpha == 1) {
+            greenLightView.alpha = 0.5
+            redLightView.alpha = 1
+        } else if redLightView.alpha == 1 && yellowLightView.alpha != 1 && greenLightView.alpha != 1 {
+            redLightView.alpha = 0.5
+            yellowLightView.alpha = 1
+        } else if redLightView.alpha != 1 && yellowLightView.alpha == 1 && greenLightView.alpha != 1  {
+            yellowLightView.alpha = 0.5
+            greenLightView.alpha = 1
+        } else {
+            greenLightView.alpha = 0.5
+        }
         startButton.setTitle(redLightView.alpha != 1 && yellowLightView.alpha != 1 && greenLightView.alpha != 1 ?
                              "START" : "NEXT", for: .normal)
     }
